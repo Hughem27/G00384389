@@ -1,20 +1,79 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-tittle> 
+          <center> 
+             Work Companion
+         </center>
+     </ion-tittle>
   </ion-toolbar>
-</ion-header>
+ </ion-header>
+ 
+ 
+ <ion-content color="secondary"><center>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                    <ion-card-subtitle>Store Room Help</ion-card-subtitle>
+                    <ion-button color="success" (click)="backstore()"><ion-card-title>Back Store <ion-icon name="construct-outline"></ion-icon></ion-card-title></ion-button>
+                    </ion-card-header>
+                
+                    <ion-card-content>
+                    Click here for information and help on anything to do with the Backstore!
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col>
+                <ion-card>
+                    <ion-card-header>
+                    <ion-card-subtitle>Timetables</ion-card-subtitle>
+                    <ion-button color="success" (click)="roster()"><ion-card-title>Roster<ion-icon name="time-outline"></ion-icon></ion-card-title></ion-button>
+                    </ion-card-header>
+                
+                    <ion-card-content>
+                    Click here to view this weeks roster and next weeks!
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>        
+    </ion-grid>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+     <ion-card>
+         <ion-card-header>
+         <ion-card-subtitle>Management</ion-card-subtitle>
+         <ion-button color="success" (click)="management()"><ion-card-title color="dark">Management<ion-icon name="people-outline"></ion-icon></ion-card-title></ion-button>
+         </ion-card-header>
+     
+         <ion-card-content >
+         Click here for Manager information!
+         </ion-card-content>
+     </ion-card>
+     <ion-card>
+        <ion-card-header>
+        <ion-card-subtitle>About Us</ion-card-subtitle>
+        <ion-button color="success" (click)="aboutUs()"><ion-card-title color="dark">About Us<ion-icon name="happy-outline"></ion-icon></ion-card-title></ion-button>
+        </ion-card-header>
+    
+        <ion-card-content >
+        Click here for information about us!
+        </ion-card-content>
+    </ion-card>
+ </center></ion-content>
+ 
+ <ion-footer>
+    <ion-toolbar color="warning">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <center><ion-button color="light" (click)="home()"><ion-icon name="home-outline"></ion-icon></ion-button> </center>
+          </ion-col>       
+       </ion-row>
+      
+      </ion-grid>
+
+
     </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  </ion-footer> 
+ 
+ 

@@ -1,0 +1,87 @@
+<ion-header> 
+  <ion-toolbar color="warning">
+    <center><ion-title>Backstore</ion-title></center>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="secondary">
+  <center>
+ 
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card target="_blank" href='https://www.youtube.com/watch?v=OeDxGrHxhDQ'>
+          <ion-card-header>
+          <ion-card-subtitle>Click for how to empty the cardboard baler</ion-card-subtitle>
+          <ion-button color="success" (click)="cardboard()" ><ion-card-title>Cardboard Baler Help</ion-card-title></ion-button>
+          </ion-card-header>
+      
+          <ion-card-content>
+            A video on how to empty the cardboard baler
+          </ion-card-content>
+      </ion-card>
+      </ion-col>
+
+
+      <ion-col>
+        <ion-card target="_blank" href='https://www.youtube.com/watch?v=kuiKXavqaCs'>
+          <ion-card-header>
+          <ion-card-subtitle>Click below for how to empty the plastic baler!</ion-card-subtitle>
+          <ion-button color="primary" (click)="plastic()"><ion-card-title color="light">Plastic Baler Help</ion-card-title></ion-button>
+          </ion-card-header>
+      
+          <ion-card-content>
+            A video on how to empty the plastic baler
+          </ion-card-content>
+      </ion-card>
+      </ion-col>
+
+    
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+          <ion-card-subtitle>How to check in deliveries and invoices</ion-card-subtitle>
+          <ion-button color="warning" (click)="checkingIn()"><ion-card-title color="dark">Checking Invoices</ion-card-title></ion-button>
+          </ion-card-header>
+      
+          <ion-card-content>
+          Click here for help on checking in deliveries and how to deal with invoices!
+          </ion-card-content>
+      </ion-card>
+      </ion-col>
+
+
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+          <ion-card-subtitle>Store Room Rules</ion-card-subtitle>
+          <ion-button color="danger" (click)="storeRules()"><ion-card-title>Back Store Rules</ion-card-title></ion-button>
+          </ion-card-header>
+      
+          <ion-card-content>
+          Click here for information and general rules in the Backstore!
+          </ion-card-content>
+      </ion-card>
+      </ion-col>
+      <ion-row>
+      
+      </ion-row>
+    </ion-row>
+    </ion-grid>
+  </center>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <center><ion-button color="light" (click)="home()"><ion-icon name="home-outline"></ion-icon></ion-button> </center>
+        </ion-col>       
+     </ion-row>
+    
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer> 
+

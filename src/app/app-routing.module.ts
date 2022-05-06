@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'backstore',
+    loadChildren: () => import('./backstore/backstore.module').then( m => m.BackstorePageModule)
+  },
+  {
+    path: 'management',
+    loadChildren: () => import('./management/management.module').then( m => m.ManagementPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'roster',
+    loadChildren: () => import('./roster/roster.module').then( m => m.RosterPageModule)
+  },
 ];
 
 @NgModule({
