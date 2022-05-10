@@ -1,27 +1,127 @@
-<ion-header> 
+<ion-header>
   <ion-toolbar color="warning">
-    <center><ion-title>Management</ion-title></center>
+    <center>
+      <ion-title>About Us</ion-title>
+    </center>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="secondary">
   <ion-grid>
-    <ion-row>
-      <ion-col>
-          Queries?
-      </ion-col>
+    <center>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Shop website</ion-card-subtitle>
+              <ion-button color="danger" target="_blank" href="https://www.facebook.com/hughessupervaluclaregalway/">
+                Store public website <ion-icon name="desktop-outline"></ion-icon>
+              </ion-button>
+            </ion-card-header>
 
-      <ion-col>
-        <center>
-          <ion-button target="_blank" href="https://www.google.com/maps/place/Hughes's+SuperValu+Claregalway/@53.3406448,-8.9490458,17z/data=!3m1!4b1!4m5!3m4!1s0x485b9241f6dd1665:0xe07085ce0fffeaa4!8m2!3d53.3406448!4d-8.9468571"><ion-icon name="location-outline"></ion-icon> CLick to visit location  <ion-icon name="location-outline"></ion-icon></ion-button>
-        </center>
-      </ion-col>
 
-      <ion-col>
+            <ion-card-content>
+              Click here for the public consumer website
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
 
-      </ion-col>
-    </ion-row>
-  </ion-grid>        
+        <ion-col>
+          <center>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-subtitle>Store Location</ion-card-subtitle>
+                <ion-button target="_blank"
+                  href="https://www.google.com/maps/place/Hughes's+SuperValu+Claregalway/@53.3406448,-8.9490458,17z/data=!3m1!4b1!4m5!3m4!1s0x485b9241f6dd1665:0xe07085ce0fffeaa4!8m2!3d53.3406448!4d-8.9468571">
+                  <ion-icon name="location-outline"></ion-icon>Directions to Store <ion-icon name="location-outline">
+                  </ion-icon>
+                </ion-button>
+
+              </ion-card-header>
+
+              <ion-card-content>
+                Click here for Directions to the store
+              </ion-card-content>
+            </ion-card>
+          </center>
+        </ion-col>
+
+
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Our Managing Director</ion-card-subtitle>
+              <ion-button target="_blank" href="https://ie.linkedin.com/in/eva-hughes-58b79936">Eva Hughes <ion-icon
+                  name="logo-linkedin"></ion-icon>
+              </ion-button>
+
+            </ion-card-header>
+
+            <ion-card-content>
+              Click here for more on Eva Hughes, our Managing Director
+            </ion-card-content>
+          </ion-card>
+
+
+        </ion-col>
+
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Please Rate Your Work Place Satisfaction</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+
+              <ion-list>
+                <ion-radio-group [(ngModel)]="myStatus">
+                  <ion-list-header>
+                    <ion-label>Level Of Satisfaction</ion-label>
+                  </ion-list-header>
+
+                  <ion-item color="success">
+                    <ion-label color="dark">Great</ion-label>
+                    <ion-radio slot="start" color="dark" value="great"></ion-radio>
+                  </ion-item>
+
+                  <ion-item color="primary">
+                    <ion-label color="dark">Good</ion-label>
+                    <ion-radio slot="start" color="dark" value="good"></ion-radio>
+                  </ion-item>
+
+                  <ion-item color="warning">
+                    <ion-label color="dark">Okay</ion-label>
+                    <ion-radio slot="start" color="dark" value="okay"></ion-radio>
+                  </ion-item>
+
+                  <ion-item color="danger">
+                    <ion-label color="dark">Poor</ion-label>
+                    <ion-radio slot="start" color="dark" value="poor"></ion-radio>
+                  </ion-item>
+
+
+
+                </ion-radio-group>
+              </ion-list>
+              <center>
+                <ion-button (click)="SaveStatus()">Save <ion-icon name="save-outline"></ion-icon>
+                </ion-button>
+              </center>
+
+            </ion-card-content>
+
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </center>
+  </ion-grid>
 </ion-content>
 
 
@@ -30,10 +130,14 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <center><ion-button color="light" (click)="home()"><ion-icon name="home-outline"></ion-icon></ion-button> </center>
-        </ion-col>       
-     </ion-row>
-    
+          <center>
+            <ion-button color="light" (click)="home()">
+              <ion-icon name="home-outline"></ion-icon>
+            </ion-button>
+          </center>
+        </ion-col>
+      </ion-row>
+
     </ion-grid>
   </ion-toolbar>
-</ion-footer> 
+</ion-footer>

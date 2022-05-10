@@ -1,58 +1,127 @@
-<ion-header> 
+<ion-header>
   <ion-toolbar color="warning">
-    <center><ion-title>Management</ion-title></center>
+    <center>
+      <ion-title>Management</ion-title>
+    </center>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="secondary">
+  <ion-card color="danger">
+    <ion-card-header>
+      <center>
+        <ion-title>
+          <center>Your Satisfaction level is {{myStatus}}</center>
+        </ion-title>
+      </center>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid>
+    <center>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Display Employees</ion-card-subtitle>
+              <ion-button color="warning" (click)="show()" (click)="presentToast()">
+                <ion-card-title>Display Employees <ion-icon name="accessibility-outline"></ion-icon>
+                </ion-card-title>
+              </ion-button>
+            </ion-card-header>
 
-  <ion-grid> <center>
-     <ion-row>
-       <ion-col>
-        <ion-card>
-          <ion-card-header>
-          <ion-card-subtitle>Display Employees</ion-card-subtitle>
-          <ion-button color="warning" (click)="storeRules()"><ion-card-title>Display Employees <ion-icon name="accessibility-outline"></ion-icon></ion-card-title></ion-button>
-          </ion-card-header>
-      
-          <ion-card-content>
-          Click here for list of employees and employee information
-          </ion-card-content>
+            <ion-card-content>
+              Click here for list of employees and employee information
+            </ion-card-content>
           </ion-card>
-      </ion-col>
+        </ion-col>
 
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-          <ion-card-subtitle>Display Department Info</ion-card-subtitle>
-          <ion-button color="danger" (click)="storeRules()"><ion-card-title>Display Department information <ion-icon name="people-circle-sharp"></ion-icon></ion-card-title></ion-button>
-          </ion-card-header>
-      
-          <ion-card-content>
-          Click here for list of Departments and relevant information
-          </ion-card-content>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Display Department Info</ion-card-subtitle>
+              <ion-button color="danger" (click)="showDepartment()" >
+                <ion-card-title >Display Department information <ion-icon name="people-circle-sharp"></ion-icon>
+                </ion-card-title>
+              </ion-button>
+            </ion-card-header>
+
+            <ion-card-content>
+              Click here for list of Departments and relevant information
+            </ion-card-content>
           </ion-card>
 
-      </ion-col>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle> </ion-card-subtitle>
 
-     </ion-row>
-  </center></ion-grid>
- <ion-item>
+              <ion-card-title>Employee Info
+              </ion-card-title>
 
-  Yo
- </ion-item>
-  
+            </ion-card-header>
+
+            <ion-card-content [hidden]="hidden">
+              <h3>Employee Name  |  Employee ID Number</h3>
+              <ol>
+                <li *ngFor="let employee of employees">{{employee.firstName}} ,{{employee.iD}}</li>
+              </ol>
+              
+                
+
+
+
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle> </ion-card-subtitle>
+
+              <ion-card-title>Info on departments</ion-card-title>
+
+            </ion-card-header  >
+              
+            <ion-card-content [hidden]="hiddenDepartment">
+                
+              <ol>
+                <li>Fruit&Veg</li>
+                <li>Shop Floor</li>
+                <li>Checkout</li>
+                <li>BackStore</li>
+                <li>HR</li>
+                <li>Accounts</li>
+                <li>Customer Service</li>
+                <li>Online Department</li>
+              </ol>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </center>
+  </ion-grid>
 </ion-content>
+
+
 
 <ion-footer>
   <ion-toolbar color="warning">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <center><ion-button color="light" (click)="home()"><ion-icon name="home-outline"></ion-icon></ion-button> </center>
-        </ion-col>       
-     </ion-row>
-    
+          <center>
+            <ion-button color="light" (click)="home()">
+              <ion-icon name="home-outline"></ion-icon>
+            </ion-button>
+          </center>
+        </ion-col>
+      </ion-row>
+
     </ion-grid>
   </ion-toolbar>
-</ion-footer> 
+</ion-footer>

@@ -1,72 +1,123 @@
-<ion-header> 
+<ion-header>
   <ion-toolbar color="warning">
-    <center><ion-title>Backstore</ion-title></center>
+    <center>
+      <ion-title>Backstore</ion-title>
+    </center>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="secondary">
   <center>
- 
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-card target="_blank" href='https://www.youtube.com/watch?v=OeDxGrHxhDQ'>
-          <ion-card-header>
-          <ion-card-subtitle>Click for how to empty the cardboard baler</ion-card-subtitle>
-          <ion-button color="success" (click)="cardboard()" ><ion-card-title>Cardboard Baler Help</ion-card-title></ion-button>
-          </ion-card-header>
-      
-          <ion-card-content>
-            A video on how to empty the cardboard baler
-          </ion-card-content>
-      </ion-card>
-      </ion-col>
 
-
-      <ion-col>
-        <ion-card target="_blank" href='https://www.youtube.com/watch?v=kuiKXavqaCs'>
-          <ion-card-header>
-          <ion-card-subtitle>Click below for how to empty the plastic baler!</ion-card-subtitle>
-          <ion-button color="primary" (click)="plastic()"><ion-card-title color="light">Plastic Baler Help</ion-card-title></ion-button>
-          </ion-card-header>
-      
-          <ion-card-content>
-            A video on how to empty the plastic baler
-          </ion-card-content>
-      </ion-card>
-      </ion-col>
-
-    
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-          <ion-card-subtitle>How to check in deliveries and invoices</ion-card-subtitle>
-          <ion-button color="warning" (click)="checkingIn()"><ion-card-title color="dark">Checking Invoices</ion-card-title></ion-button>
-          </ion-card-header>
-      
-          <ion-card-content>
-          Click here for help on checking in deliveries and how to deal with invoices!
-          </ion-card-content>
-      </ion-card>
-      </ion-col>
-
-
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-          <ion-card-subtitle>Store Room Rules</ion-card-subtitle>
-          <ion-button color="danger" (click)="storeRules()"><ion-card-title>Back Store Rules</ion-card-title></ion-button>
-          </ion-card-header>
-      
-          <ion-card-content>
-          Click here for information and general rules in the Backstore!
-          </ion-card-content>
-      </ion-card>
-      </ion-col>
+    <ion-grid>
       <ion-row>
-      
+        <ion-col>
+          <ion-card target="_blank" href='https://www.youtube.com/watch?v=OeDxGrHxhDQ'>
+            <ion-card-header>
+              <ion-card-subtitle>Click for how to empty the cardboard baler</ion-card-subtitle>
+              <ion-button color="success">
+                <ion-card-title>Cardboard Baler Help</ion-card-title>
+              </ion-button>
+            </ion-card-header>
+
+            <ion-card-content>
+              A video on how to empty the cardboard baler
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+
+        <ion-col>
+          <ion-card target="_blank" href='https://www.youtube.com/watch?v=kuiKXavqaCs'>
+            <ion-card-header>
+              <ion-card-subtitle>Click below for how to empty the plastic baler!</ion-card-subtitle>
+              <ion-button color="primary">
+                <ion-card-title color="light">Plastic Baler Help</ion-card-title>
+              </ion-button>
+            </ion-card-header>
+
+            <ion-card-content>
+              A video on how to empty the plastic baler
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
       </ion-row>
-    </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>How to check in deliveries and invoices</ion-card-subtitle>
+              <ion-button color="warning" (click)="checkingIn()">
+                <ion-card-title color="dark">Checking Invoices</ion-card-title>
+              </ion-button>
+            </ion-card-header>
+
+            <ion-card-content>
+              Click here for help on checking in deliveries and how to deal with invoices!
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Store Room Rules</ion-card-subtitle>
+              <ion-button color="danger" (click)="storeRules()">
+                <ion-card-title>Back Store Rules</ion-card-title>
+              </ion-button>
+            </ion-card-header>
+
+            <ion-card-content>
+              Click here for information and general rules in the Backstore!
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-row>
+
+        </ion-row>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+
+          <ion-card [hidden]="hiddenInvoice">
+            <ion-card-header>
+              <ion-card-subtitle></ion-card-subtitle>
+              <ion-card-title>This is how you check in delivery:</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <br>
+              1. Count all incoming stock and compare it to number on docket
+              <br>
+              2. Once all information is correct - sign, stamp & number the store copy docket & merchant docket
+              <br>
+              3. Put the store copy of invoice into the docket box
+              <br>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card [hidden]="hiddenRules">
+            <ion-card-header>
+              <ion-card-subtitle></ion-card-subtitle>
+              <ion-card-title>Store Rules</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              1. Put any waste in the bin
+              <br>
+              2. Don't leave baler full. Empty it yourself or find somebody who can
+              <br>
+              3. Be tidy
+              <br> 
+              4. If unsure, just ask :)
+              <br>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
     </ion-grid>
   </center>
 </ion-content>
@@ -77,11 +128,14 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <center><ion-button color="light" (click)="home()"><ion-icon name="home-outline"></ion-icon></ion-button> </center>
-        </ion-col>       
-     </ion-row>
-    
+          <center>
+            <ion-button color="light" (click)="home()">
+              <ion-icon name="home-outline"></ion-icon>
+            </ion-button>
+          </center>
+        </ion-col>
+      </ion-row>
+
     </ion-grid>
   </ion-toolbar>
-</ion-footer> 
-
+</ion-footer>

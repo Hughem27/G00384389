@@ -8,7 +8,7 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  
   constructor(private navCtrl:NavController) {}
 
   backstore(){
