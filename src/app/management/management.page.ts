@@ -18,7 +18,7 @@ export class ManagementPage implements OnInit {
   hidden = false;
   hiddenDepartment = false;
 
-
+  //  setting up jSon File
   ngOnInit() {
     this.servServices.GetEmployeeData().subscribe(
       (data) => {
@@ -29,11 +29,12 @@ export class ManagementPage implements OnInit {
 
   }
 
-
+  //  Travel to home page
   home() {
     this.navCtrl.navigateBack('/home');
   }
   
+  //  Toast notification to display warning
   async presentToast() {
     const toast = await this.toastController.create({
       message: 'Warning - Private Information',
@@ -41,6 +42,7 @@ export class ManagementPage implements OnInit {
     });
     toast.present();
   }
+  //  method to show & hide info
   show() {
 
     if (this.hidden == true) {
@@ -51,6 +53,7 @@ export class ManagementPage implements OnInit {
     }
   }
 
+  //  show Department info
   showDepartment() {
 
     if (this.hiddenDepartment == true) {
@@ -63,7 +66,7 @@ export class ManagementPage implements OnInit {
 
 
 
-
+//  method for saving storage
   ionViewDidEnter() {
     this.storage.create().then(
       () => {

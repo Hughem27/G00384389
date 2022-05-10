@@ -9,6 +9,7 @@ export class EmployeesService {
 
   constructor(private Http:HttpClient) { }
 
+  //  method for getting info from json file
   GetEmployeeData():Observable<any>{
     return this.Http.get('https://jsonblob.com/api/jsonBlob/973544812515180544');
   }

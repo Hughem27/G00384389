@@ -12,33 +12,34 @@ export class BackstorePage implements OnInit {
   hiddenRules = false;
 
 
-  constructor(private navCtrl:NavController) { }
+  constructor(private navCtrl: NavController) { }
 
-  home(){
+  //  Method For home button
+  home() {
     this.navCtrl.navigateBack('/home');
   }
 
-  
 
-  checkingIn(){    
+  //  Method For displaying the invoice rules
+  checkingIn() {
 
-      if (this.hiddenInvoice == true) {
-        this.hiddenInvoice = false;
-      }
-      else {
-        this.hiddenInvoice = true;
-      }
-    
+    if (this.hiddenInvoice == true) {
+      this.hiddenInvoice = false;
+    }
+    else {
+      this.hiddenInvoice = true;
+    }
+
   }
-
-  storeRules(){
+//  Method For displaying the store rules
+  storeRules() {
     if (this.hiddenRules == true) {
       this.hiddenRules = false;
     }
     else {
       this.hiddenRules = true;
     }
-    
+
   }
 
 

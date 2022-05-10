@@ -10,6 +10,7 @@ export class RosterPage implements OnInit {
 
   constructor(private navCtrl:NavController) { }
 
+  //  method for travelloing to home page
   home(){
     this.navCtrl.navigateBack('/home');
   }
